@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0 — 2026-11-23
+
+- **Automatic Peek** (Peek → Auto): a plain click on a link to another site opens it in a Peek, in any tab, like Arc's pinned tabs. Links within the same site navigate normally; Alt+click still peeks any link.
+- **Automatic Mini Peek** (Mini Peek → Auto): rest the pointer on a link for a moment and the preview appears, no key needed. Just passing over links loads nothing.
+- Settings popup: a bit wider, so every option fits.
+
 ## 1.0.0 — 2026-11-23
 
 First release.

@@ -62,12 +62,15 @@
     let url;
     try { url = new URL(a.href, location.href); } catch { return false; }
     if (!/^https?:$/.test(url.protocol)) return false;
+    const auto = cfg.modifier === 'auto';
     const mod = cfg.modifier === 'shift' ? e.shiftKey && !e.altKey
-              : cfg.modifier === 'alt' ? e.altKey && !e.shiftKey : false;
+              : cfg.modifier === 'alt' || auto ? e.altKey && !e.shiftKey : false;
     if (mod) return true;
     if (e.shiftKey || e.altKey) return false;
-    // Arc: in a pinned tab, links to other sites open in a Peek
-    return cfg.pinned && pinned && site(url.hostname) !== site(location.hostname);
+    const cross = site(url.hostname) !== site(location.hostname);
+    // Automatic: a plain click on a link to another site opens a Peek, in any tab.
+    // Arc: the same, but only in pinned tabs.
+    return cross && (auto || (cfg.pinned && pinned));
   }
 
   addEventListener('click', (e) => {
@@ -105,11 +108,13 @@
    * Click it, or click the link, to open the full Peek. */
   const isMac = /Mac|iPhone|iPad/.test(navigator.platform);
   const KEY = { shift: 'Shift', alt: 'Alt', ctrl: isMac ? 'Meta' : 'Control' };
-  const held = (e) => cfg.mini === 'shift' ? e.shiftKey : cfg.mini === 'alt' ? e.altKey
+  // 'auto': no key, just rest the pointer on a link a little longer
+  const held = (e) => cfg.mini === 'auto' ? true : cfg.mini === 'shift' ? e.shiftKey : cfg.mini === 'alt' ? e.altKey
                     : cfg.mini === 'ctrl' ? (isMac ? e.metaKey : e.ctrlKey) : false;
   const MW = 480, MH = 300, SCALE = 0.4;
   const REVEAL_MS = 120;        // a short rest on the link; the page already starts loading meanwhile
-  let hover = null, keyDown = false, mini = null, miniTimer = 0, leaveTimer = 0;
+  const AUTO_MS = 350;          // automatic mode: wait this long before loading, so passing over links costs nothing
+  let hover = null, keyDown = false, mini = null, miniTimer = 0, leaveTimer = 0, pendingFor = null;
   const cache = new Map();      // url -> recently shown previews, kept hidden and loaded for a quick return
 
   /* The framing rule is armed as soon as the key goes down, so the preview can start loading the
@@ -123,7 +128,7 @@
   function disarmSoon() {
     clearTimeout(disarmTimer);
     disarmTimer = setTimeout(() => {
-      if (keyDown || mini || !armed) return;
+      if ((keyDown && cfg.mini !== 'auto') || mini || !armed) return;
       armed = null;
       api.runtime.sendMessage({ type: 'miniClosed' }).catch(() => {});
     }, 1500);
@@ -135,6 +140,18 @@
     try { return /^https?:$/.test(new URL(a.href, location.href).protocol); } catch { return false; }
   }
   function schedule() {
+    if (cfg.mini === 'auto') {
+      if (hover === pendingFor) return;          // still resting on the same link
+      clearTimeout(miniTimer);
+      pendingFor = null;
+      if (!miniOk(hover) || (mini && mini.a === hover)) return;
+      pendingFor = hover;
+      miniTimer = setTimeout(() => {
+        pendingFor = null;
+        if (miniOk(hover) && !(mini && mini.a === hover)) showMini(hover);
+      }, AUTO_MS);
+      return;
+    }
     clearTimeout(miniTimer);
     if (!keyDown || !miniOk(hover) || (mini && mini.a === hover)) return;
     showMini(hover);
@@ -144,7 +161,7 @@
     hover = onMini ? hover : linkFrom(e);
     const was = keyDown;
     keyDown = held(e);
-    if (keyDown && !was) arm();
+    if (keyDown && !was && cfg.mini !== 'auto') arm();
     clearTimeout(leaveTimer);
     if (mini && !onMini && hover !== mini.a) {   // left the link: give the pointer time to reach the preview
       leaveTimer = setTimeout(() => { if (mini && !mini.hovered && hover !== mini.a) hideMini(false, true); }, 200);
@@ -244,7 +261,7 @@
   }
 
   function hideMini(instant, keepPending) {   // keepPending: another link's preview is on its way
-    if (!keepPending) clearTimeout(miniTimer);
+    if (!keepPending) { clearTimeout(miniTimer); pendingFor = null; }
     clearTimeout(leaveTimer);
     if (!mini) return;
     const m = mini;
@@ -259,7 +276,7 @@
       while (cache.size > 3) { const [k, old] = cache.entries().next().value; cache.delete(k); clearTimeout(old.timer); old.host.remove(); }
     };
     instant ? park() : setTimeout(park, 160);
-    if (!keyDown) disarmSoon();
+    if (!keyDown || cfg.mini === 'auto') disarmSoon();
   }
 
   /* ---------- the Peek ---------- */

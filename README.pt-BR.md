@@ -23,7 +23,8 @@
 ## Funções
 
 - **Alt+clique em qualquer link** para espiar (ou Shift+clique, você escolhe). No Mac, o Alt é o ⌥ Option.
-- **Mini Peek:** segure Shift e pare o mouse em cima de um link para ver uma prévia ao vivo ao lado dele. Clique nela para abrir o Peek completo. A tecla é configurável (Shift, Alt ou Ctrl/⌘) e a função pode ser desligada. A prévia abre sem o seu login, então uma espiada nunca executa nada na sua conta.
+- **Peek automático (opcional):** coloque o Peek em **Auto** e um clique normal em qualquer link para outro site abre no Peek, em todas as abas.
+- **Mini Peek:** segure Shift e pare o mouse em cima de um link para ver uma prévia ao vivo ao lado dele. Clique nela para abrir o Peek completo. A tecla é configurável (Shift, Alt ou Ctrl/⌘) ou **Auto**, que dispensa tecla: basta parar o mouse um instante no link. A função também pode ser desligada. A prévia abre sem o seu login, então uma espiada nunca executa nada na sua conta.
 - **Abas fixadas funcionam como no Arc:** links para *outros sites* abrem no Peek automaticamente, e links do mesmo site navegam normalmente.
 - **Botão direito num link → Espiar com o Lampyris.**
 - **Fechar** com Esc, com o botão ✕ ou clicando fora.

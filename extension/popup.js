@@ -58,7 +58,11 @@ captureBackdrop().then((ok) => { if (ok) setInterval(captureBackdrop, BACKDROP_M
 
   for (const seg of document.querySelectorAll('.seg')) {
     const k = seg.dataset.key;
-    const paint = () => seg.querySelectorAll('button').forEach((b) => b.classList.toggle('on', b.dataset.v === cfg[k]));
+    const paint = () => {
+      seg.querySelectorAll('button').forEach((b) => b.classList.toggle('on', b.dataset.v === cfg[k]));
+      document.querySelectorAll(`.hint[data-for="${k}"]`).forEach((h) =>
+        h.classList.toggle('on', h.dataset.not ? cfg[k] !== h.dataset.not : h.dataset.v === cfg[k]));
+    };
     seg.addEventListener('click', (e) => {
       const b = e.target.closest('button');
       if (b) { save(k, b.dataset.v); paint(); }

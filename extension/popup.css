@@ -2,7 +2,7 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 body {
-  width: 320px; position: relative; overflow: hidden; color: #fff; background: #141414;
+  width: 340px; position: relative; overflow: hidden; color: #fff; background: #141414;
   font: 400 13px/1.35 "YouTube Sans", Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 /* Frosted "see-through" look: a live, blurred snapshot of the page behind the popup, at real
@@ -25,11 +25,13 @@ h1 { flex: 1; margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -.1p
 .row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 small { display: block; opacity: .62; font-size: 11.5px; margin-top: 2px; }
 .field > div:first-child { margin-bottom: 8px; }
-.field > small { margin: -5px 0 8px; }
-.seg.four { grid-template-columns: repeat(4, 1fr); }
-.seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; background: rgba(255, 255, 255, .08); border-radius: 28px; padding: 3px; }
+.hint.top { margin: -5px 0 8px; }
+.seg.four button, .seg.five button { font-size: 11.5px; }
+.hint { margin-top: 7px; display: none; }
+.hint.on { display: block; }
+.seg { display: flex; gap: 4px; background: rgba(255, 255, 255, .08); border-radius: 28px; padding: 3px; }
 .seg button {
-  all: unset; text-align: center; padding: 6px 4px; border-radius: 28px; cursor: pointer; font-size: 12px; color: rgba(255, 255, 255, .8);
+  all: unset; flex: 1 1 auto; min-width: 0; white-space: nowrap; text-align: center; padding: 6px 5px; border-radius: 28px; cursor: pointer; font-size: 12px; color: rgba(255, 255, 255, .8);
   transition: background .15s, color .15s;
 }
 .seg button:hover { background: rgba(255, 255, 255, .1); }

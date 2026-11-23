@@ -93,5 +93,14 @@
   },
   "openPeek": {
     "message": "Abrir no Peek"
+  },
+  "popAuto": {
+    "message": "Auto"
+  },
+  "popPeekAutoHint": {
+    "message": "Um clique normal num link para outro site abre o Peek. Alt+clique abre qualquer link."
+  },
+  "popMiniAutoHint": {
+    "message": "Aparece quando você para o mouse num link, sem precisar de tecla."
   }
 }

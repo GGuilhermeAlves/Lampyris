@@ -23,7 +23,8 @@
 ## Features
 
 - **Alt+click any link** to peek it (or Shift+click, your choice). On a Mac, Alt is ⌥ Option.
-- **Mini Peek:** hold Shift and rest the pointer on a link for a small live preview next to it. Click it to open the full Peek. The key is configurable (Shift, Alt or Ctrl/⌘) or it can be turned off. The preview loads without your login, so a glance can never act on your account.
+- **Automatic Peek (optional):** set Peek to **Auto** and a plain click on any link to another site opens it in a Peek, in every tab.
+- **Mini Peek:** hold Shift and rest the pointer on a link for a small live preview next to it. Click it to open the full Peek. The key is configurable (Shift, Alt or Ctrl/⌘) or **Auto**, which needs no key at all, just a short rest on the link. It can also be turned off. The preview loads without your login, so a glance can never act on your account.
 - **Pinned tabs work like Arc:** links to *other sites* open in a Peek automatically, links within the same site navigate normally.
 - **Right-click a link → Peek with Lampyris.**
 - **Close** with Esc, the ✕ button, or a click outside.
@@ -102,7 +103,7 @@ scripts/pack.sh            builds dist/lampyris-<version>-chrome.zip and -firefo
 There is no build step. Edit files in `extension/`, then click ↻ on the extension card in `chrome://extensions` (or **Reload** in Firefox's `about:debugging`) and reload the page.
 
 ```
-./scripts/pack.sh        # → dist/lampyris-1.0.0-chrome.zip + dist/lampyris-1.0.0-firefox.zip
+./scripts/pack.sh        # → dist/lampyris-<version>-chrome.zip + dist/lampyris-<version>-firefox.zip
 ```
 
 ## Privacy

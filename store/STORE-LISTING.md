@@ -16,6 +16,7 @@ Dê Alt+clique em qualquer link e ele abre numa janela flutuante por cima da pá
 
 • Alt+clique (ou Shift+clique) em qualquer link
 • Mini Peek: segure Shift e pare o mouse num link para ver uma prévia
+• Modo automático opcional para os dois: sem tecla nenhuma
 • Abas fixadas como no Arc: links para outros sites abrem no Peek sozinhos
 • Botão direito → Espiar com o Lampyris
 • Barra com recarregar, copiar link, abrir numa janela e abrir como aba
@@ -33,6 +34,7 @@ Alt+click any link and it opens in a floating window over the page. Take a look,
 
 • Alt+click (or Shift+click) any link
 • Mini Peek: hold Shift and rest the pointer on a link for a preview
+• Optional automatic mode for both: no key at all
 • Pinned tabs like Arc: links to other sites open in a Peek on their own
 • Right-click → Peek with Lampyris
 • Toolbar with reload, copy link, open in a window and open as a tab
@@ -58,7 +60,7 @@ Alt+click any link and it opens in a floating window over the page. Take a look,
 
 ## 3. Chrome Web Store
 
-1. Rode `./scripts/pack.sh`, que gera `dist/lampyris-1.0.0-chrome.zip` e `dist/lampyris-1.0.0-firefox.zip`.
+1. Rode `./scripts/pack.sh`, que gera `dist/lampyris-<versão>-chrome.zip` e `dist/lampyris-<versão>-firefox.zip`.
 2. No Developer Dashboard, clique em **New item** e envie o `-chrome.zip`.
 3. Preencha os textos acima, o ícone de 128px (`extension/icons/icon128.png`) e as capturas de 1280×800 que já estão em `store/images/` (Peek e Mini Peek, em inglês e português).
 4. Em **Privacy**, cole as justificativas da seção 2 e o link da política de privacidade.

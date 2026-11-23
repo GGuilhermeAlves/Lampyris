@@ -21,22 +21,26 @@
 
       <div class="field">
         <div data-i18n="popShortcut"></div>
-        <div class="seg" data-key="modifier">
+        <div class="seg four" data-key="modifier">
           <button data-v="alt" data-i18n="popAlt" class="k"></button>
           <button data-v="shift" data-i18n="popShift" class="k"></button>
+          <button data-v="auto" data-i18n="popAuto"></button>
           <button data-v="off" data-i18n="popOff"></button>
         </div>
+        <small class="hint" data-for="modifier" data-v="auto" data-i18n="popPeekAutoHint"></small>
       </div>
 
       <div class="field">
         <div data-i18n="popMini"></div>
-        <small data-i18n="popMiniHint"></small>
-        <div class="seg four" data-key="mini">
+        <small class="hint top" data-for="mini" data-not="auto" data-i18n="popMiniHint"></small>
+        <div class="seg five" data-key="mini">
           <button data-v="shift" data-i18n="popKeyShift" class="k"></button>
           <button data-v="alt" data-i18n="popKeyAlt" class="k"></button>
           <button data-v="ctrl" data-i18n="popKeyCtrl" class="k"></button>
+          <button data-v="auto" data-i18n="popAuto"></button>
           <button data-v="off" data-i18n="popOff"></button>
         </div>
+        <small class="hint" data-for="mini" data-v="auto" data-i18n="popMiniAutoHint"></small>
       </div>
 
       <div class="field">
