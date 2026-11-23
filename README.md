@@ -26,6 +26,16 @@
 - **Sites that refuse to be framed** still open: while a Peek is open, Lampyris lifts the anti-framing headers for that tab only. If a page still can't load, it falls back to a small popup window automatically.
 - Three sizes, a per-site off switch, English and Brazilian Portuguese.
 
+## See it in action
+
+**Peek** — Alt+click a link: the page opens over the one you're reading, with the toolbar on top.
+
+<p align="center"><img src="docs/peek-en.png" width="100%" alt="A Peek open over a reading list, showing an article in a floating window with the toolbar above it"></p>
+
+**Mini Peek** — hold Shift and rest the pointer on a link: a small live preview appears next to it. Click it to open the full Peek.
+
+<p align="center"><img src="docs/mini-en.png" width="100%" alt="A Mini Peek preview of an article shown next to the link in a reading list"></p>
+
 ## Install
 
 Lampyris works on **Chromium browsers** (Chrome, Edge, Brave, Opera, Vivaldi…) and **Firefox 140+** from the same code.

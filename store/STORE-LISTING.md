@@ -60,7 +60,7 @@ Alt+click any link and it opens in a floating window over the page. Take a look,
 
 1. Rode `./scripts/pack.sh`, que gera `dist/lampyris-1.0.0-chrome.zip` e `dist/lampyris-1.0.0-firefox.zip`.
 2. No Developer Dashboard, clique em **New item** e envie o `-chrome.zip`.
-3. Preencha os textos acima, o ícone de 128px (`extension/icons/icon128.png`) e pelo menos uma captura de tela de 1280×800.
+3. Preencha os textos acima, o ícone de 128px (`extension/icons/icon128.png`) e as capturas de 1280×800 que já estão em `store/images/` (Peek e Mini Peek, em inglês e português).
 4. Em **Privacy**, cole as justificativas da seção 2 e o link da política de privacidade.
 5. Envie para revisão. A permissão de acesso a todos os sites costuma deixar a revisão mais demorada.
 6. Opcional: publique também na Microsoft Edge Add-ons e no Opera Add-ons, que aceitam o mesmo `-chrome.zip`.

@@ -26,6 +26,16 @@
 - **Sites que recusam ser abertos dentro de outra página** abrem mesmo assim: enquanto um Peek está aberto, o Lampyris remove os cabeçalhos que bloqueiam isso, só naquela aba. Se mesmo assim a página não carregar, ela abre automaticamente numa janelinha pop-up.
 - Três tamanhos, opção para desligar por site, inglês e português.
 
+## Veja funcionando
+
+**Peek**: dê Alt+clique num link e a página abre por cima da que você está lendo, com a barra de ações em cima.
+
+<p align="center"><img src="docs/peek-pt_BR.png" width="100%" alt="Um Peek aberto por cima de uma lista de leitura, mostrando um artigo numa janela flutuante com a barra de ações acima"></p>
+
+**Mini Peek**: segure Shift e pare o mouse em cima de um link para ver uma prévia ao vivo ao lado dele. Clique nela para abrir o Peek completo.
+
+<p align="center"><img src="docs/mini-pt_BR.png" width="100%" alt="A prévia do Mini Peek de um artigo aparecendo ao lado do link numa lista de leitura"></p>
+
 ## Instalação
 
 O Lampyris funciona em **navegadores Chromium** (Chrome, Edge, Brave, Opera, Vivaldi…) e no **Firefox 140+**, com o mesmo código.
