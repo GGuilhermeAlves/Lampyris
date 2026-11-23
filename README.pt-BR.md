@@ -3,7 +3,14 @@
 </p>
 <h1 align="center">Lampyris</h1>
 <p align="center">
-  Português · <a href="README.md">English</a>
+  <a href="https://github.com/GGuilhermeAlves/lampyris/releases/latest"><img src="https://img.shields.io/github/v/release/GGuilhermeAlves/lampyris?label=release&color=2b3a6b" alt="Última versão"></a>
+  <img src="https://img.shields.io/badge/Chromium-supported-2b3a6b?logo=googlechrome&logoColor=white" alt="Chromium">
+  <img src="https://img.shields.io/badge/Firefox-140%2B-2b3a6b?logo=firefoxbrowser&logoColor=white" alt="Firefox 140+">
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/GGuilhermeAlves/lampyris?color=2b3a6b" alt="Licença"></a>
+</p>
+
+<p align="center">
+  <a href="README.md">English</a> · <b>Português (Brasil)</b>
 </p>
 
 **O Peek do Arc em qualquer navegador.** Dê Alt+clique num link e ele abre numa janela flutuante por cima da página. Dê uma olhada, feche e você continua exatamente onde estava. Se valer a pena, transforme em aba de verdade com um clique.

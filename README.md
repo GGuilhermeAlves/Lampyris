@@ -3,7 +3,14 @@
 </p>
 <h1 align="center">Lampyris</h1>
 <p align="center">
-  <a href="README.pt-BR.md">Português</a> · English
+  <a href="https://github.com/GGuilhermeAlves/lampyris/releases/latest"><img src="https://img.shields.io/github/v/release/GGuilhermeAlves/lampyris?label=release&color=2b3a6b" alt="Latest release"></a>
+  <img src="https://img.shields.io/badge/Chromium-supported-2b3a6b?logo=googlechrome&logoColor=white" alt="Chromium">
+  <img src="https://img.shields.io/badge/Firefox-140%2B-2b3a6b?logo=firefoxbrowser&logoColor=white" alt="Firefox 140+">
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/GGuilhermeAlves/lampyris?color=2b3a6b" alt="License"></a>
+</p>
+
+<p align="center">
+  <b>English</b> · <a href="README.pt-BR.md">Português (Brasil)</a>
 </p>
 
 **Arc-style Peek for any browser.** Alt+click a link and it opens in a floating window over the page. Look, close, and you're right where you were. If it's worth keeping, promote it to a real tab with one click.
