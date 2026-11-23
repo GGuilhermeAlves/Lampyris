@@ -1,0 +1,48 @@
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  width: 320px; position: relative; overflow: hidden; color: #fff; background: #141414;
+  font: 400 13px/1.35 "YouTube Sans", Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+/* Frosted "see-through" look: a live, blurred snapshot of the page behind the popup, at real
+   scale and aligned to the corner the popup opens from (same as Glaux). The current frame stays
+   fully opaque underneath ("base") while the next one fades in on top, so it never flickers. */
+.backdrop { position: fixed; inset: -40px; z-index: 0; background: #181818; filter: blur(24px) saturate(1.2); transform: scale(1.05); }
+.shot { position: absolute; inset: 0; background-repeat: no-repeat; opacity: 0; will-change: opacity; }
+.shot.base { opacity: 1; z-index: 1; }
+.shot.incoming { z-index: 2; transition: opacity .35s ease; }
+.shot.incoming.in { opacity: 1; }
+main { position: relative; z-index: 1; padding: 12px; background: rgba(0, 0, 0, .22); min-height: 100%; }
+header { display: flex; align-items: center; gap: 12px; padding: 4px 6px 4px 2px; margin-bottom: 10px; }
+.logo { width: 44px; height: 44px; border-radius: 11px; }
+h1 { flex: 1; margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -.1px; }
+#opts { display: grid; gap: 6px; transition: opacity .2s; }
+#opts.off { opacity: .4; pointer-events: none; }
+.row, .field {
+  background: rgba(0, 0, 0, .38); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-radius: 16px; padding: 10px 12px;
+}
+.row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+small { display: block; opacity: .62; font-size: 11.5px; margin-top: 2px; }
+.field > div:first-child { margin-bottom: 8px; }
+.field > small { margin: -5px 0 8px; }
+.seg.four { grid-template-columns: repeat(4, 1fr); }
+.seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; background: rgba(255, 255, 255, .08); border-radius: 28px; padding: 3px; }
+.seg button {
+  all: unset; text-align: center; padding: 6px 4px; border-radius: 28px; cursor: pointer; font-size: 12px; color: rgba(255, 255, 255, .8);
+  transition: background .15s, color .15s;
+}
+.seg button:hover { background: rgba(255, 255, 255, .1); }
+.seg button.on { background: #fff; color: #0f0f0f; font-weight: 600; }
+.seg button:focus-visible { outline: 2px solid rgba(255, 255, 255, .7); }
+.switch { position: relative; width: 36px; height: 20px; flex: none; cursor: pointer; }
+.switch input { position: absolute; opacity: 0; }
+.switch span { position: absolute; inset: 0; border-radius: 20px; background: rgba(255, 255, 255, .25); transition: background .2s; }
+.switch span::after {
+  content: ""; position: absolute; left: 3px; top: 3px; width: 14px; height: 14px; border-radius: 50%; background: #fff; transition: transform .2s;
+}
+.switch input:checked + span { background: #f1f1f1; }
+.switch input:checked + span::after { transform: translateX(16px); background: #0f0f0f; }
+.switch input:focus-visible + span { outline: 2px solid rgba(255, 255, 255, .7); outline-offset: 2px; }
+.switch input:disabled + span { opacity: .4; }
+footer { margin-top: 10px; font-size: 11.5px; opacity: .6; text-align: center; }

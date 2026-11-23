@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"><div class="shot" id="shotA"></div><div class="shot" id="shotB"></div></div>
+  <main>
+    <header>
+      <img src="icons/icon128.png" alt="" class="logo">
+      <h1>Lampyris</h1>
+      <label class="switch" title=""><input type="checkbox" id="enabled"><span></span></label>
+    </header>
+
+    <section id="opts">
+      <div class="row">
+        <div><div data-i18n="popPinned"></div><small data-i18n="popPinnedHint"></small></div>
+        <label class="switch"><input type="checkbox" id="pinned"><span></span></label>
+      </div>
+
+      <div class="field">
+        <div data-i18n="popShortcut"></div>
+        <div class="seg" data-key="modifier">
+          <button data-v="alt" data-i18n="popAlt" class="k"></button>
+          <button data-v="shift" data-i18n="popShift" class="k"></button>
+          <button data-v="off" data-i18n="popOff"></button>
+        </div>
+      </div>
+
+      <div class="field">
+        <div data-i18n="popMini"></div>
+        <small data-i18n="popMiniHint"></small>
+        <div class="seg four" data-key="mini">
+          <button data-v="shift" data-i18n="popKeyShift" class="k"></button>
+          <button data-v="alt" data-i18n="popKeyAlt" class="k"></button>
+          <button data-v="ctrl" data-i18n="popKeyCtrl" class="k"></button>
+          <button data-v="off" data-i18n="popOff"></button>
+        </div>
+      </div>
+
+      <div class="field">
+        <div data-i18n="popSize"></div>
+        <div class="seg" data-key="size">
+          <button data-v="compact" data-i18n="popCompact"></button>
+          <button data-v="medium" data-i18n="popMedium"></button>
+          <button data-v="large" data-i18n="popLarge"></button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div data-i18n="popOutside"></div>
+        <label class="switch"><input type="checkbox" id="outside"><span></span></label>
+      </div>
+
+      <div class="row">
+        <div id="siteLabel"></div>
+        <label class="switch"><input type="checkbox" id="site"><span></span></label>
+      </div>
+    </section>
+
+    <footer data-i18n="popTip"></footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

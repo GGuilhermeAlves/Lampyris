@@ -1,0 +1,97 @@
+{
+  "extName": {
+    "message": "Lampyris"
+  },
+  "extDesc": {
+    "message": "O Peek do Arc em qualquer navegador. Alt+clique num link para abri-lo numa janela flutuante sem sair da página, ou segure Shift em cima de um link para ver uma prévia."
+  },
+  "reload": {
+    "message": "Recarregar"
+  },
+  "copyLink": {
+    "message": "Copiar link"
+  },
+  "copied": {
+    "message": "Link copiado"
+  },
+  "openWindow": {
+    "message": "Abrir numa janela"
+  },
+  "openTab": {
+    "message": "Abrir como aba"
+  },
+  "close": {
+    "message": "Fechar (Esc)"
+  },
+  "menuPeek": {
+    "message": "Espiar com o Lampyris"
+  },
+  "popEnabled": {
+    "message": "Lampyris ligado"
+  },
+  "popPinned": {
+    "message": "Espiar links de abas fixadas"
+  },
+  "popPinnedHint": {
+    "message": "Como no Arc: links para outros sites abrem no Peek"
+  },
+  "popShortcut": {
+    "message": "Peek"
+  },
+  "popShift": {
+    "message": "Shift+clique"
+  },
+  "popAlt": {
+    "message": "Alt+clique"
+  },
+  "popOff": {
+    "message": "Desligado"
+  },
+  "popSize": {
+    "message": "Tamanho"
+  },
+  "popCompact": {
+    "message": "Compacto"
+  },
+  "popMedium": {
+    "message": "Médio"
+  },
+  "popLarge": {
+    "message": "Grande"
+  },
+  "popOutside": {
+    "message": "Fechar ao clicar fora"
+  },
+  "popSite": {
+    "message": "Desligar em $SITE$",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "popNoSite": {
+    "message": "Indisponível nesta página"
+  },
+  "popTip": {
+    "message": "Dica: clique com o botão direito num link → Espiar com o Lampyris"
+  },
+  "popMini": {
+    "message": "Mini Peek"
+  },
+  "popMiniHint": {
+    "message": "Segure a tecla e pare o mouse em cima de um link"
+  },
+  "popKeyShift": {
+    "message": "Shift"
+  },
+  "popKeyAlt": {
+    "message": "Alt"
+  },
+  "popKeyCtrl": {
+    "message": "Ctrl"
+  },
+  "openPeek": {
+    "message": "Abrir no Peek"
+  }
+}

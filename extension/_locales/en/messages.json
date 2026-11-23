@@ -1,0 +1,97 @@
+{
+  "extName": {
+    "message": "Lampyris"
+  },
+  "extDesc": {
+    "message": "Arc-style Peek for any browser. Alt+click a link to open it in a floating window without leaving the page, or hold Shift over a link for a mini preview."
+  },
+  "reload": {
+    "message": "Reload"
+  },
+  "copyLink": {
+    "message": "Copy link"
+  },
+  "copied": {
+    "message": "Link copied"
+  },
+  "openWindow": {
+    "message": "Open in a window"
+  },
+  "openTab": {
+    "message": "Open as a tab"
+  },
+  "close": {
+    "message": "Close (Esc)"
+  },
+  "menuPeek": {
+    "message": "Peek with Lampyris"
+  },
+  "popEnabled": {
+    "message": "Lampyris on"
+  },
+  "popPinned": {
+    "message": "Peek links from pinned tabs"
+  },
+  "popPinnedHint": {
+    "message": "Like Arc: links to other sites open in a Peek"
+  },
+  "popShortcut": {
+    "message": "Peek"
+  },
+  "popShift": {
+    "message": "Shift+click"
+  },
+  "popAlt": {
+    "message": "Alt+click"
+  },
+  "popOff": {
+    "message": "Off"
+  },
+  "popSize": {
+    "message": "Size"
+  },
+  "popCompact": {
+    "message": "Compact"
+  },
+  "popMedium": {
+    "message": "Medium"
+  },
+  "popLarge": {
+    "message": "Large"
+  },
+  "popOutside": {
+    "message": "Close when clicking outside"
+  },
+  "popSite": {
+    "message": "Turn off on $SITE$",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "popNoSite": {
+    "message": "Not available on this page"
+  },
+  "popTip": {
+    "message": "Tip: right-click a link → Peek with Lampyris"
+  },
+  "popMini": {
+    "message": "Mini Peek"
+  },
+  "popMiniHint": {
+    "message": "Hold the key and rest the pointer on a link"
+  },
+  "popKeyShift": {
+    "message": "Shift"
+  },
+  "popKeyAlt": {
+    "message": "Alt"
+  },
+  "popKeyCtrl": {
+    "message": "Ctrl"
+  },
+  "openPeek": {
+    "message": "Open in Peek"
+  }
+}
