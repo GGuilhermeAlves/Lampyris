@@ -61,7 +61,7 @@ Lampyris works on **Chromium browsers** (Chrome, Edge, Brave, Opera, Vivaldi…)
 **Manually on Firefox (temporary, for testing):**
 
 1. Open `about:debugging#/runtime/this-firefox`.
-2. Click **Load Temporary Add-on…** and pick `extension/manifest.json`.
+2. Click **Load Temporary Add-on…** and pick `lampyris-<version>-firefox.zip` from the [latest release](https://github.com/GGuilhermeAlves/lampyris/releases/latest) (from a clone, run `./scripts/pack.sh` first and pick the zip in `dist/`).
 3. Open `about:addons` → Lampyris → **Permissions** and allow access to all websites, otherwise links won't be intercepted.
 
 ## Limitations
@@ -90,7 +90,7 @@ This was tested in Chrome. Firefox handles extension frames differently and hasn
 
 ```
 extension/
-├── manifest.json          universal MV3 manifest (Chromium + Firefox)
+├── manifest.json          MV3 manifest for Chromium (pack.sh adapts it for Firefox)
 ├── content.js             click handling and the Peek window
 ├── frame.html / frame.js  the extension frame that keeps you logged in
 ├── background.js          framing and login rules, Peek tracking, popup-window fallback, context menu

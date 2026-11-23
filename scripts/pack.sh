@@ -11,13 +11,17 @@ for TARGET in chrome firefox; do
 import json, sys
 path, target = sys.argv[1], sys.argv[2]
 m = json.load(open(path))
-if target == "chrome":
-    m.pop("browser_specific_settings", None)
-    m["background"] = {"service_worker": m["background"]["service_worker"]}
-else:
+# extension/manifest.json is written for Chromium; the Firefox build gets Firefox's background
+# page, its add-on ID and the data-collection declaration AMO requires.
+if target == "firefox":
     m.pop("minimum_chrome_version", None)
-    m["background"] = {"scripts": m["background"]["scripts"]}
+    m["background"] = {"scripts": [m["background"]["service_worker"]]}
     for w in m.get("web_accessible_resources", []): w.pop("use_dynamic_url", None)
+    m["browser_specific_settings"] = {"gecko": {
+        "id": "lampyris@lampyris-peek",
+        "strict_min_version": "140.0",
+        "data_collection_permissions": {"required": ["none"]},
+    }}
 json.dump(m, open(path, "w"), ensure_ascii=False, indent=2)
 PY
   OUT="dist/lampyris-${VERSION}-${TARGET}.zip"

@@ -61,7 +61,7 @@ O Lampyris funciona em **navegadores Chromium** (Chrome, Edge, Brave, Opera, Viv
 **Manual no Firefox (temporário, para testar):**
 
 1. Abra `about:debugging#/runtime/this-firefox`.
-2. Clique em **Carregar extensão temporária…** e escolha `extension/manifest.json`.
+2. Clique em **Carregar extensão temporária…** e escolha o `lampyris-<versão>-firefox.zip` da [última versão](https://github.com/GGuilhermeAlves/lampyris/releases/latest) (num clone, rode `./scripts/pack.sh` antes e escolha o zip em `dist/`).
 3. Abra `about:addons` → Lampyris → **Permissões** e permita o acesso a todos os sites. Sem isso os links não são interceptados.
 
 ## Limitações
