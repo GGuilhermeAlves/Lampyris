@@ -8,6 +8,11 @@
 
 **Arc-style Peek for any browser.** Alt+click a link and it opens in a floating window over the page. Look, close, and you're right where you were. If it's worth keeping, promote it to a real tab with one click.
 
+<p align="center">
+  <img src="docs/hero.png" width="100%" alt="Pixel art of a night meadow: glow-worm females shine on the grass while unlit males fly above">
+</p>
+<p align="center"><sub>True to the species: in <i>Lampyris noctiluca</i> the wingless females glow on the grass at night, and the males fly in search of them with only a pair of tiny, faint lights.</sub></p>
+
 ## Features
 
 - **Alt+click any link** to peek it (or Shift+click, your choice). On a Mac, Alt is ⌥ Option.

@@ -8,6 +8,11 @@
 
 **O Peek do Arc em qualquer navegador.** Dê Alt+clique num link e ele abre numa janela flutuante por cima da página. Dê uma olhada, feche e você continua exatamente onde estava. Se valer a pena, transforme em aba de verdade com um clique.
 
+<p align="center">
+  <img src="docs/hero.png" width="100%" alt="Pixel art de um campo à noite: fêmeas de vaga-lume brilham na grama enquanto machos apagados voam acima">
+</p>
+<p align="center"><sub>Fiel à espécie: no <i>Lampyris noctiluca</i>, as fêmeas, que não têm asas, brilham na grama à noite, e os machos voam à procura delas só com duas luzinhas fracas.</sub></p>
+
 ## Funções
 
 - **Alt+clique em qualquer link** para espiar (ou Shift+clique, você escolhe). No Mac, o Alt é o ⌥ Option.
