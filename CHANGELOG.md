@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.1 — 2026-11-23
+
+- Fix: videos (YouTube and others) started playing inside Mini Peek previews, couldn't be paused and kept playing in the background after the preview hid. Previews now keep all video and audio paused and muted; the full Peek plays normally.
+- Opening the full Peek from a preview discards that preview, and switching tabs frees the stored previews, so no page keeps running hidden.
+
 ## 1.1.0 — 2026-11-23
 
 - **Automatic Peek** (Peek → Auto): a plain click on a link to another site opens it in a Peek, in any tab, like Arc's pinned tabs. Links within the same site navigate normally; Alt+click still peeks any link.

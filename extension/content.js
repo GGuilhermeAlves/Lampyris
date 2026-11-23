@@ -228,6 +228,7 @@
     document.documentElement.appendChild(host);
     arm().then(() => {
       const f = document.createElement('iframe');
+      f.name = '__lampyris_mini';     // mini-guard.js keeps videos and audio paused in here
       f.setAttribute('credentialless', '');
       f.setAttribute('sandbox', 'allow-scripts allow-same-origin');
       f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
@@ -259,6 +260,15 @@
     const reveal = () => requestAnimationFrame(() => { if (mini === m) m.wrap.classList.add('on'); });
     if (warm) reveal(); else miniTimer = setTimeout(reveal, REVEAL_MS);
   }
+
+  function dropMini(url) {
+    for (const [k, m] of cache) {
+      if (url && k !== url) continue;
+      cache.delete(k); clearTimeout(m.timer); m.host.remove();
+    }
+  }
+  // leaving the tab: close the preview and free the stored ones
+  document.addEventListener('visibilitychange', () => { if (document.hidden) { hideMini(true); dropMini(); } });
 
   function hideMini(instant, keepPending) {   // keepPending: another link's preview is on its way
     if (!keepPending) { clearTimeout(miniTimer); pendingFor = null; }
@@ -337,6 +347,7 @@
 
   async function open(href, at) {
     hideMini(true);
+    dropMini(href);   // the full Peek replaces its preview; don't keep that page running hidden
     if (peek) close(true);
     const sz = SIZES[cfg.size] || SIZES.medium;
     const vw = innerWidth, vh = innerHeight;
